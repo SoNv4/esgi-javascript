@@ -23,6 +23,24 @@ function snake_case(value) {
 
 function leet(value) {
     if(typeof value !== "string" || value.length === 0) return undefined;
+// A -> 4, E -> 3, I -> 1,
+    return value.split("").map(
+        str =>{
+            switch(str){
+                case "a" :
+                    return str.replace("a","4");
+                break;
+                case "e" :
+                    return str.replace("e","3");
+                break;
+                case "o" :
+                    return str.replace("o", "0");
+                break;
+                default:
+                    return str;
+            }
+        }
+    ).join('');
 }
 
 function prop_access(value) {
