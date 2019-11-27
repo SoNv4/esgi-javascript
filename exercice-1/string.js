@@ -32,6 +32,7 @@ function prop_access(value) {
 function verlan(value) {
     if(typeof value !== "string" || value.length === 0) return undefined;
     var reverse = value.split("").reverse().join('');
+    reverse = yoda(reverse);
     return reverse;
 }
 
